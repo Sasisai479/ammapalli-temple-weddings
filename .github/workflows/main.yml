@@ -64,7 +64,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: "157.173.216.88"
-          username: "u551651590.ammapalli"
+          username: "u551651590.ammapallitempleweddings"
           password: "Singer@1984"
           port: 21
           local-dir: dist/client/
