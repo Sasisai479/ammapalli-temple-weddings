@@ -6,67 +6,45 @@ on:
       - main
 
   workflow_dispatch:
-    inputs:
-      commit_sha:
-        description: 'Commit SHA to deploy (leave empty for latest)'
-        required: false
 
 jobs:
-  build:
-    name: Build React App
+  deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build Project
         run: CI=false npm run build
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-files
-          path: dist/client/
-          retention-days: 1
-
-  deploy:
-    name: Deploy to Hostinger (FTP)
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: build-files
-          path: dist/client/
-
-      - name: Create .htaccess for React Router
+      - name: Create .htaccess
         run: |
-          cat > dist/client/.htaccess << 'EOF'
+          cat > dist/.htaccess << 'EOF'
           Options -MultiViews
           RewriteEngine On
+
           RewriteCond %{REQUEST_FILENAME} !-f
           RewriteCond %{REQUEST_FILENAME} !-d
-          RewriteRule ^ index.html [QSA,L]
+          RewriteRule ^ index.html [L,QSA]
           EOF
 
-      - name: FTP Deploy
+      - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: "157.173.216.88"
-          username: "u551651590.ammapallitempleweddings"
+          username: "u551651590.ammapalli"
           password: "Singer@1984"
           port: 21
-          local-dir: dist/client/
+          local-dir: dist/
           server-dir: /
           dangerous-clean-slate: false
