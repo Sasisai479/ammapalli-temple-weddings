@@ -27,6 +27,9 @@ jobs:
       - name: Build Project
         run: CI=false npm run build
 
+      - name: Verify Build
+        run: ls -la dist
+
       - name: Create .htaccess
         run: |
           cat > dist/.htaccess << 'EOF'
@@ -41,10 +44,11 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: "157.173.216.88"
-          username: "u551651590.ammapalli"
-          password: "Singer@1984"
+          server: ftp.ammapallitempleweddings.com
+          username: u551651590.ammapalli
+          password: Singer@1984
           port: 21
+          protocol: ftp
           local-dir: dist/
-          server-dir: /
+          server-dir: /public_html/
           dangerous-clean-slate: false
