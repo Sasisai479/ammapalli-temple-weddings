@@ -26,7 +26,6 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-gold transition-colors">About Us</Link></li>
             <li><Link to="/services" className="hover:text-gold transition-colors">All Services</Link></li>
-            <li><Link to="/packages" className="hover:text-gold transition-colors">Wedding Packages</Link></li>
             <li><Link to="/gallery" className="hover:text-gold transition-colors">Gallery</Link></li>
             <li><Link to="/testimonials" className="hover:text-gold transition-colors">Testimonials</Link></li>
             <li><Link to="/faq" className="hover:text-gold transition-colors">FAQ</Link></li>

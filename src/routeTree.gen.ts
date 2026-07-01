@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RealWeddingsRouteImport } from './routes/real-weddings'
-import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -36,11 +35,6 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const RealWeddingsRoute = RealWeddingsRouteImport.update({
   id: '/real-weddings',
   path: '/real-weddings',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PackagesRoute = PackagesRouteImport.update({
-  id: '/packages',
-  path: '/packages',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GalleryRoute = GalleryRouteImport.update({
@@ -96,7 +90,6 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
-  '/packages': typeof PackagesRoute
   '/real-weddings': typeof RealWeddingsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
@@ -111,7 +104,6 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
-  '/packages': typeof PackagesRoute
   '/real-weddings': typeof RealWeddingsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
@@ -127,7 +119,6 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/gallery': typeof GalleryRoute
-  '/packages': typeof PackagesRoute
   '/real-weddings': typeof RealWeddingsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
@@ -144,7 +135,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/gallery'
-    | '/packages'
     | '/real-weddings'
     | '/sitemap.xml'
     | '/testimonials'
@@ -159,7 +149,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/gallery'
-    | '/packages'
     | '/real-weddings'
     | '/sitemap.xml'
     | '/testimonials'
@@ -174,7 +163,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/gallery'
-    | '/packages'
     | '/real-weddings'
     | '/sitemap.xml'
     | '/testimonials'
@@ -190,7 +178,6 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   GalleryRoute: typeof GalleryRoute
-  PackagesRoute: typeof PackagesRoute
   RealWeddingsRoute: typeof RealWeddingsRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TestimonialsRoute: typeof TestimonialsRoute
@@ -219,13 +206,6 @@ declare module '@tanstack/react-router' {
       path: '/real-weddings'
       fullPath: '/real-weddings'
       preLoaderRoute: typeof RealWeddingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/packages': {
-      id: '/packages'
-      path: '/packages'
-      fullPath: '/packages'
-      preLoaderRoute: typeof PackagesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gallery': {
@@ -313,7 +293,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   GalleryRoute: GalleryRoute,
-  PackagesRoute: PackagesRoute,
   RealWeddingsRoute: RealWeddingsRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TestimonialsRoute: TestimonialsRoute,

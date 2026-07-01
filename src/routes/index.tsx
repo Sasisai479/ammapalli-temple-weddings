@@ -252,25 +252,7 @@ function Home() {
         </div>
       </section>
 
-      {/* PACKAGES TEASE */}
-      <section className="bg-card/40 border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div className="text-xs tracking-[0.4em] uppercase text-gold">Temple Wedding Packages</div>
-            <h2 className="font-display text-4xl md:text-5xl mt-6">From intimate to <span className="gold-gradient italic">grand</span></h2>
-            <p className="text-muted-foreground mt-6 leading-relaxed">
-              Our Silver, Gold and Platinum temple wedding packages cover every guest count and budget — fully customisable,
-              transparently priced, and built around your family's traditions.
-            </p>
-            <Link to="/packages" className="inline-flex items-center gap-3 bg-gold text-primary-foreground rounded-full px-8 py-4 text-xs tracking-[0.3em] uppercase shadow-gold mt-10 hover:translate-y-[-2px] transition-transform">
-              Compare Packages <ArrowUpRight className="size-4" />
-            </Link>
-          </div>
-          <div className="relative aspect-video overflow-hidden hover-zoom">
-            <img src={mandap} alt="Luxury floral mandap decoration for Telugu wedding" loading="lazy" width={1600} height={900} className="absolute inset-0 size-full object-cover" />
-          </div>
-        </div>
-      </section>
+
 
       {/* CATERING + DECOR + RITUALS QUICK LINKS */}
       <section className="max-w-7xl mx-auto px-6 py-32">

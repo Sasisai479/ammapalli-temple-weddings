@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { services } from "@/lib/services";
-import { packages } from "@/lib/site";
 import { realWeddings } from "@/lib/realWeddings";
 
 interface SitemapEntry {
@@ -19,7 +18,6 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/about", changefreq: "monthly", priority: "0.8" },
           { path: "/services", changefreq: "monthly", priority: "0.9" },
-          { path: "/packages", changefreq: "monthly", priority: "0.9" },
           { path: "/catering", changefreq: "monthly", priority: "0.8" },
           { path: "/gallery", changefreq: "monthly", priority: "0.7" },
           { path: "/real-weddings", changefreq: "monthly", priority: "0.8" },
@@ -30,11 +28,6 @@ export const Route = createFileRoute("/sitemap.xml")({
             path: `/services/${s.slug}`,
             changefreq: "monthly",
             priority: "0.7",
-          })),
-          ...packages.map((p) => ({
-            path: `/packages#${p.slug}`,
-            changefreq: "monthly",
-            priority: "0.6",
           })),
           ...realWeddings.map((w) => ({
             path: `/real-weddings/${w.slug}`,

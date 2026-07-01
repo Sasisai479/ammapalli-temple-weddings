@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
-import whatsappLogo from "@/assets/whatsapp-logo.png";
+import whatsappLogo from "@/assets/whatsapp.svg";
 
 export function FloatingActions() {
   return (
