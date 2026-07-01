@@ -9,7 +9,6 @@ on:
 
 jobs:
   deploy:
-    name: Build & Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -19,18 +18,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: "22"
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build Project
         run: npm run build
-
-      - name: Verify Build
-        run: |
-          ls -la
-          ls -la dist
 
       - name: Create .htaccess
         run: |
@@ -41,18 +35,17 @@ jobs:
 
           RewriteCond %{REQUEST_FILENAME} !-f
           RewriteCond %{REQUEST_FILENAME} !-d
-          RewriteRule . /index.html [L]
+          RewriteRule ^ index.html [L]
 
           EOF
 
       - name: Deploy via FTP
-  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-  with:
-    server: "157.173.216.88"
-    username: "u551651590"
-    password: "${{ secrets.FTP_PASSWORD }}"
-    port: 21
-    protocol: "ftp"
-    local-dir: "./dist/"
-    server-dir: "/public_html/"
-    dangerous-clean-slate: false
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: "157.173.216.88"
+          username: "u551651590"
+          password: "Singer@1984"
+          port: 21
+          local-dir: "dist/"
+          server-dir: "/public_html/"
+          dangerous-clean-slate: false
