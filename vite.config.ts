@@ -39,7 +39,6 @@ export default defineConfig({
             "/contact",
             "/faq",
             "/gallery",
-            "/packages",
             "/real-weddings",
             "/services",
             "/testimonials",
