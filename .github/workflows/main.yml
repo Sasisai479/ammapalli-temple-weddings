@@ -1,28 +1,42 @@
-name: Deploy Website (FTP)
+name: Deploy to Hostinger
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
+    name: Build & Deploy to Hostinger
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: "npm"
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Build Project
+      - name: Build project
         run: npm run build
+
+      - name: Create .htaccess for SPA routing
+        run: |
+          cat > dist/client/.htaccess << 'EOF'
+          Options -MultiViews
+          RewriteEngine On
+
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule ^ index.html [L,QSA]
+          EOF
 
       - name: Deploy to Hostinger FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -35,3 +49,7 @@ jobs:
           local-dir: "./dist/client/"
           server-dir: "/public_html/"
           dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
