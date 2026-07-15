@@ -1,4 +1,4 @@
-name: Deploy to Hostinger
+name: Build & Deploy to Hostinger
 
 on:
   push:
@@ -7,52 +7,32 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
-    name: Build & Deploy to Hostinger
+  deploy:
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "npm"
+          node-version: 22
+          cache: npm
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Build project
+      - name: Build Project
         run: npm run build
 
-      - name: Create .htaccess for SPA routing
-        run: |
-          cat > dist/client/.htaccess << 'EOF'
-          Options -MultiViews
-          RewriteEngine On
-
-          RewriteCond %{REQUEST_FILENAME} !-f
-          RewriteCond %{REQUEST_FILENAME} !-d
-          RewriteRule ^ index.html [L,QSA]
-          EOF
-
-      - name: Deploy to Hostinger FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: "157.173.216.88"
-          username: "u551651590"
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           port: 21
-          local-dir: "./dist/client/"
-          server-dir: "/public_html/"
-          dangerous-clean-slate: false
-          timeout: 120000
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+          local-dir: ./dist/
+          server-dir: ./public_html/
