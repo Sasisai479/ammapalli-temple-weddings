@@ -226,7 +226,7 @@ function Home() {
               { icon: Heart, t: "Authentic Telugu Traditions", d: "Veda-trained pundits, regional cuisine and rituals performed exactly as your family wishes." },
               { icon: Crown, t: "Luxury, Done Right", d: "Premium florals, cinematic films, designer décor — every detail is investment-worthy." },
               { icon: Star, t: "12+ Years Experience", d: "From intimate temple ceremonies to 1,500-guest celebrations — we've delivered them all." },
-              { icon: CheckCircle2, t: "Transparent Pricing", d: "Itemised proposals, no hidden costs, flexible packages for every budget." },
+              { icon: CheckCircle2, t: "Transparent Pricing", d: "Itemised proposals, no hidden costs, flexible options for every budget." },
               { icon: MapPin, t: "Destination Specialists", d: "Curated experiences for NRI families and couples flying in from across India and abroad." },
             ].map((f) => (
               <div key={f.t} className="border border-border p-8 bg-background hover-lift">

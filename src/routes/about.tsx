@@ -96,7 +96,7 @@ function About() {
             { t: "Temple-trained team", d: "Years of dedicated experience at Ammapalli — we know every priest, every protocol, every shortcut." },
             { t: "Telugu at heart", d: "Native fluency in Telugu, deep familiarity with Smartha and Vaishnava traditions." },
             { t: "Single-window planning", d: "One planner. One contract. One team. Zero handover gaps." },
-            { t: "Transparent pricing", d: "Itemised proposals, no hidden costs, flexible packages." },
+            { t: "Transparent pricing", d: "Itemised proposals, no hidden costs, flexible options." },
             { t: "NRI-friendly", d: "Remote-first communication, video walk-throughs, live streaming." },
             { t: "End-to-end production", d: "Décor, catering, photography, accommodation, entertainment — all in-house." },
           ].map((f) => (

@@ -113,7 +113,7 @@ function RealWeddingDetail() {
         {([
           { icon: Calendar, label: "Date", value: w.displayDate },
           { icon: Users, label: "Guests", value: `${w.guests}` },
-          { icon: Package, label: "Package", value: w.package },
+          { icon: Package, label: "Type", value: w.weddingType },
           { icon: MapPin, label: "From", value: w.city },
         ] as { icon: LucideIcon; label: string; value: string }[]).map((s) => (
           <div key={s.label} className="border border-border bg-card/40 p-5">
@@ -194,9 +194,6 @@ function RealWeddingDetail() {
           <EnquireButton className="inline-flex items-center gap-3 bg-gold text-primary-foreground rounded-full px-8 py-4 text-xs tracking-[0.3em] uppercase shadow-gold hover:translate-y-[-2px] transition-transform">
             Start planning <ArrowUpRight className="size-4" />
           </EnquireButton>
-          <Link to="/packages" className="inline-flex items-center gap-3 border border-gold/50 rounded-full text-gold px-8 py-4 text-xs tracking-[0.3em] uppercase hover:bg-gold/10 transition-colors">
-            See packages
-          </Link>
         </div>
       </section>
 

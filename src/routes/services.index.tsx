@@ -75,7 +75,7 @@ function Services() {
       </section>
 
       <section className="max-w-3xl mx-auto px-6 pb-32 text-center">
-        <SectionHeading eyebrow="Need a custom plan?" title="Let's design a" highlight="bespoke proposal" intro="Mix and match services across packages or build a fully bespoke wedding around your family's traditions." />
+        <SectionHeading eyebrow="Need a custom plan?" title="Let's design a" highlight="bespoke proposal" intro="Mix and match services or build a fully bespoke wedding around your family's traditions." />
         <EnquireButton className="inline-flex items-center gap-3 bg-gold text-primary-foreground rounded-full px-10 py-4 text-xs tracking-[0.3em] uppercase shadow-gold mt-10 hover:translate-y-[-2px] transition-transform">
           Request a consultation <ArrowUpRight className="size-4" />
         </EnquireButton>

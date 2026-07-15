@@ -19,7 +19,7 @@ export type RealWedding = {
   date: string; // ISO
   displayDate: string;
   guests: number;
-  package: string;
+  weddingType: string;
   ceremonies: string[];
   heroImage: string;
   gallery: { src: string; alt: string }[];
@@ -39,7 +39,7 @@ export const realWeddings: RealWedding[] = [
     date: "2025-02-14",
     displayDate: "February 2025",
     guests: 220,
-    package: "Gold Temple Package",
+    weddingType: "Classic Temple Wedding",
     ceremonies: ["Pellikuthuru", "Mangala Snanam", "Kanyadanam", "Mangalsutra Dharanam", "Reception"],
     heroImage: sravaniHero,
     gallery: [
@@ -49,7 +49,7 @@ export const realWeddings: RealWedding[] = [
     excerpt:
       "A classic Telugu temple wedding at Ammapalli Sri Sita Ramachandra Swamy Temple — 220 guests, a golden jasmine mandap and the full ritual flow led by the temple's senior purohit.",
     metaDescription:
-      "Sravani & Karthik's Ammapalli Temple wedding — 220 guests, Gold package, golden jasmine mandap and full Telugu ritual flow at Sri Sita Ramachandra Swamy Temple, Shamshabad. Planned by Satavahana Events.",
+      "Sravani & Karthik's Ammapalli Temple wedding — 220 guests, classic temple wedding, golden jasmine mandap and full Telugu ritual flow at Sri Sita Ramachandra Swamy Temple, Shamshabad. Planned by Satavahana Events.",
     sections: [
       {
         heading: "Why they chose Ammapalli Temple",
@@ -99,7 +99,7 @@ export const realWeddings: RealWedding[] = [
     date: "2024-11-28",
     displayDate: "November 2024",
     guests: 180,
-    package: "Platinum Destination Package",
+    weddingType: "Destination Wedding",
     ceremonies: ["Haldi", "Mehendi", "Sangeet", "Wedding", "Reception"],
     heroImage: pravallikaHero,
     gallery: [
@@ -109,7 +109,7 @@ export const realWeddings: RealWedding[] = [
     excerpt:
       "A three-day destination wedding for an 80-strong Bengaluru and US guest list — haldi and mehendi at the hotel, wedding at Ammapalli Temple, reception under the stars.",
     metaDescription:
-      "Pravallika & Rohan's three-day destination wedding at Ammapalli Temple — 180 guests from Bengaluru and the US, Platinum package, haldi to reception. Planned by Satavahana Events.",
+      "Pravallika & Rohan's three-day destination wedding at Ammapalli Temple — 180 guests from Bengaluru and the US, destination wedding, haldi to reception. Planned by Satavahana Events.",
     sections: [
       {
         heading: "Planning a destination wedding remotely",
@@ -159,7 +159,7 @@ export const realWeddings: RealWedding[] = [
     date: "2024-06-22",
     displayDate: "June 2024",
     guests: 140,
-    package: "Gold Temple Package",
+    weddingType: "NRI Temple Wedding",
     ceremonies: ["Pellikuthuru", "Kashi Yatra", "Mangalsutra Dharanam", "Reception"],
     heroImage: anushaHero,
     gallery: [
@@ -169,7 +169,7 @@ export const realWeddings: RealWedding[] = [
     excerpt:
       "An NRI bride who needed everything planned from 13,000 km away. We delivered a 140-guest Ammapalli Temple wedding with a livestreamed ceremony for relatives in New Jersey.",
     metaDescription:
-      "Anusha & Arjun's NRI Ammapalli Temple wedding — planned remotely from New Jersey, 140 guests, Gold package, full Telugu rituals with HD livestream. Planned by Satavahana Events.",
+      "Anusha & Arjun's NRI Ammapalli Temple wedding — planned remotely from New Jersey, 140 guests, NRI temple wedding, full Telugu rituals with HD livestream. Planned by Satavahana Events.",
     sections: [
       {
         heading: "Planning remotely from New Jersey",
