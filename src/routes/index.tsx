@@ -27,12 +27,15 @@ const heroSlides = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ammapalli Temple Weddings — #1 Planner, Shamshabad Hyderabad" },
-      { name: "description", content: "Hyderabad's #1 Ammapalli Temple wedding planners. 500+ weddings, 12+ years. Muhurtam, mandap, catering, photography. Call +91 88855 52388." },
-      { property: "og:title", content: "Ammapalli Temple Weddings — Satavahana Events Hyderabad" },
-      { property: "og:description", content: "Sacred Ammapalli Temple weddings by Hyderabad's most trusted planners. 500+ weddings, 12+ years. Call +91 88855 52388." },
+      { title: "Ammapalli Weddings — #1 Temple Wedding Planner in Hyderabad | Shamshabad" },
+      { name: "description", content: "Discover Ammapalli weddings at Sri Sita Ramachandra Swamy Temple. Hyderabad's trusted planners for Ammapalli wedding ceremonies, catering, mandap décor & photography. Call +91 88855 52388." },
+      { name: "keywords", content: "Ammapalli weddings, Ammapalli temple wedding, wedding planners in Hyderabad, Ammapalli wedding cost, Shamshabad weddings, Telugu temple wedding" },
+      { property: "og:title", content: "Ammapalli Weddings — Temple Wedding Planner Hyderabad" },
+      { property: "og:description", content: "Plan your dream Ammapalli wedding with Satavahana Events. Complete planning for Ammapalli temple weddings in Shamshabad, Hyderabad. Call +91 88855 52388." },
       { property: "og:image", content: hero },
       { property: "og:url", content: "https://ammapallitempleweddings.com/" },
+      { name: "twitter:title", content: "Ammapalli Weddings — Temple Wedding Planner Hyderabad" },
+      { name: "twitter:description", content: "Plan your dream Ammapalli wedding with Satavahana Events. Complete planning for Ammapalli temple weddings in Shamshabad, Hyderabad. Call +91 88855 52388." },
     ],
     links: [{ rel: "canonical", href: "https://ammapallitempleweddings.com/" }],
     scripts: [
@@ -41,7 +44,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          name: "Ammapalli Temple Wedding Planning",
+          name: "Ammapalli Weddings Planning",
           serviceType: "Temple Wedding Planning",
           provider: {
             "@type": "LocalBusiness",
@@ -51,7 +54,26 @@ export const Route = createFileRoute("/")({
             parentOrganization: { "@type": "Organization", name: "Satavahana Events" },
           },
           areaServed: "Hyderabad, Telangana, India",
-          description: "Complete wedding planning for Ammapalli Temple weddings — catering, décor, rituals, photography. Contact +91 88855 52388.",
+          description: "Complete Ammapalli weddings planning at Sri Sita Ramachandra Swamy Temple, Shamshabad. Plan your Ammapalli wedding includes catering, décor, rituals, photography, and guest management.",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Ammapalli Weddings",
+          url: "https://ammapallitempleweddings.com",
+          logo: hero,
+          sameAs: [
+            "https://www.instagram.com/satavahanaevents/"
+          ],
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+918885552388",
+            contactType: "customer service",
+            availableLanguage: ["English", "Telugu", "Hindi"]
+          }
         }),
       },
       {
@@ -124,14 +146,13 @@ function Home() {
           <div className="fade-up">
             <div className="text-[10px] tracking-[0.5em] uppercase text-gold mb-6">Managed by Satavahana Events</div>
             <h1 className="font-display text-5xl sm:text-6xl md:text-8xl text-foreground leading-[0.95]">
-              Ammapalli Temple
+              Ammapalli
               <br />
               <span className="gold-gradient italic">Weddings</span>
             </h1>
             <div className="gold-divider w-40 mx-auto my-8" />
             <p className="max-w-2xl text-muted-foreground text-base md:text-lg leading-relaxed">
-              Celebrate your sacred wedding at the divine Ammapalli Sri Sita Ramachandra Swamy Temple with complete planning,
-              catering, decoration, photography and guest management — by Hyderabad's most trusted temple wedding planners.
+              Celebrate your sacred Ammapalli wedding at the divine Sri Sita Ramachandra Swamy Temple. We offer complete Ammapalli weddings planning with catering, decoration, photography and guest management — by Hyderabad's most trusted temple wedding planners.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a href={`tel:${SITE.phoneRaw}`} className="group inline-flex items-center gap-3 bg-gold text-primary-foreground rounded-full px-8 py-4 text-xs tracking-[0.3em] uppercase shadow-gold hover:translate-y-[-2px] transition-transform">
@@ -161,16 +182,16 @@ function Home() {
         <div>
           <div className="text-xs tracking-[0.4em] uppercase text-gold">About Ammapalli Temple</div>
           <h2 className="font-display text-4xl md:text-5xl mt-6 leading-tight">
-            A 600-year-old sanctuary for <span className="gold-gradient italic">sacred unions</span>
+            A 600-year-old sanctuary for <span className="gold-gradient italic">Ammapalli weddings</span>
           </h2>
           <p className="text-muted-foreground mt-6 leading-relaxed">
             Nestled in Shamshabad just 25 km from central Hyderabad, the Ammapalli Sri Sita Ramachandra Swamy Temple is one of the
             oldest and most revered shrines in Telangana. Devotees have travelled here for centuries to seek the blessings of Lord Rama
-            and Goddess Sita for prosperity, fertility and lifelong unions.
+            and Goddess Sita for prosperity, fertility and lifelong unions — making Ammapalli weddings truly sacred.
           </p>
           <p className="text-muted-foreground mt-4 leading-relaxed">
             Today, Ammapalli is a destination of choice for couples seeking an authentic, spiritually grounded Telugu wedding experience.
-            Its serene Dravidian architecture, intimate gopuram and sanctified mandap create a setting that no banquet hall can replicate.
+            Its serene Dravidian architecture, intimate gopuram and sanctified mandap create a setting that no banquet hall can replicate for your Ammapalli wedding.
           </p>
           <ul className="grid sm:grid-cols-2 gap-4 mt-8">
             {[
@@ -195,9 +216,9 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6 py-24">
           <SectionHeading
             eyebrow="Why Couples Choose Us"
-            title="The most trusted name in"
-            highlight="Hyderabad temple weddings"
-            intro="Twelve years, five hundred weddings, one obsession — making your sacred day unforgettable."
+            title="The most trusted name for"
+            highlight="Ammapalli weddings"
+            intro="Twelve years, five hundred weddings, one obsession — making your sacred Ammapalli wedding unforgettable."
           />
           <div className="grid md:grid-cols-3 gap-8 mt-20">
             {[
@@ -222,8 +243,8 @@ function Home() {
       <section className="max-w-7xl mx-auto px-6 py-32">
         <div className="flex items-end justify-between mb-16 flex-wrap gap-6">
           <div>
-            <div className="text-xs tracking-[0.4em] uppercase text-gold mb-4">Our Wedding Planning Services</div>
-            <h2 className="font-display text-4xl md:text-5xl">A complete <span className="gold-gradient italic">celebration suite</span></h2>
+            <div className="text-xs tracking-[0.4em] uppercase text-gold mb-4">Ammapalli Weddings Services</div>
+            <h2 className="font-display text-4xl md:text-5xl">Complete services for <span className="gold-gradient italic">your Ammapalli wedding</span></h2>
           </div>
           <Link to="/services" className="text-xs tracking-[0.3em] uppercase text-gold hover:underline">View all services →</Link>
         </div>
@@ -256,7 +277,7 @@ function Home() {
 
       {/* CATERING + DECOR + RITUALS QUICK LINKS */}
       <section className="max-w-7xl mx-auto px-6 py-32">
-        <SectionHeading eyebrow="Signature Specialities" title="Built for the" highlight="South Indian wedding" />
+        <SectionHeading eyebrow="Signature Specialities" title="Built for perfect" highlight="Ammapalli weddings" />
         <div className="grid md:grid-cols-3 gap-px bg-border mt-16">
           {[
             { img: catering, t: "Catering Services", d: "Authentic Telangana, Andhra and multi-cuisine wedding menus served on banana leaves or live counters.", to: "/catering" },
@@ -315,12 +336,12 @@ function Home() {
         <SectionHeading eyebrow="The Sacred Venue" title="About Ammapalli" highlight="Sri Sita Ramachandra Swamy Temple" />
         <div className="mt-12 grid md:grid-cols-2 gap-10 text-muted-foreground leading-relaxed">
           <div>
-            <h3 className="font-display text-2xl text-foreground mb-4">Ammapalli Temple, Shamshabad</h3>
+            <h3 className="font-display text-2xl text-foreground mb-4">Ammapalli Temple — Home to Ammapalli Weddings</h3>
             <p>
               The <strong className="text-foreground">Ammapalli Sri Sita Ramachandra Swamy Temple</strong> — locally
               called <em>Ammapalli Ramalayam</em> — is a 13th-century Kakatiya-era shrine in Shamshabad, Hyderabad. Built
               around a serene <em>kalyana mandapam</em> and a lakeside colonnade, it is one of Telangana's most
-              auspicious venues for Telugu temple weddings.
+              auspicious venues for Ammapalli weddings.
             </p>
             <p className="mt-4">
               <strong className="text-foreground">Location:</strong> Ammapalli, Shamshabad, Hyderabad — Telangana 501218.<br />
@@ -332,9 +353,9 @@ function Home() {
             <h3 className="font-display text-2xl text-foreground mb-4">Booking your Ammapalli wedding</h3>
             <p>
               We are <strong className="text-foreground">Satavahana Events</strong> — the official wedding planners
-              for <strong className="text-foreground">Ammapalli Temple Weddings</strong>. We coordinate the temple muhurtam,
+              for <strong className="text-foreground">Ammapalli weddings</strong>. We coordinate the temple muhurtam,
               priest arrangements, mandap décor, Telugu catering, photography, guest hospitality and rituals end-to-end so
-              your family is free to be fully present.
+              your family is free to be fully present for your Ammapalli wedding.
             </p>
             <p className="mt-4">
               <strong className="text-foreground">Muhurtam booking:</strong> 4–6 months in advance for premium Telugu wedding
