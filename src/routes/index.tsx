@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Ammapalli Weddings — #1 Temple Wedding Planner in Hyderabad | Shamshabad" },
       { name: "description", content: "Discover Ammapalli weddings at Sri Sita Ramachandra Swamy Temple. Hyderabad's trusted planners for Ammapalli wedding ceremonies, catering, mandap décor & photography. Call +91 88855 52388." },
-      { name: "keywords", content: "Ammapalli weddings, Ammapalli temple wedding, wedding planners in Hyderabad, Ammapalli wedding cost, Shamshabad weddings, Telugu temple wedding" },
+      { name: "keywords", content: "Ammapalli weddings, Ammapalli temple wedding, wedding planners in Hyderabad, Shamshabad weddings, Telugu temple wedding" },
       { property: "og:title", content: "Ammapalli Weddings — Temple Wedding Planner Hyderabad" },
       { property: "og:description", content: "Plan your dream Ammapalli wedding with Satavahana Events. Complete planning for Ammapalli temple weddings in Shamshabad, Hyderabad. Call +91 88855 52388." },
       { property: "og:image", content: hero },
@@ -103,7 +103,7 @@ export const Route = createFileRoute("/")({
               name: "How do I book an Ammapalli Temple wedding?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "To book your Ammapalli Temple wedding, contact Satavahana Events at +91 88855 52388 or WhatsApp the same number. We offer a free 60-minute consultation, confirm your muhurtam date with the temple and prepare a transparent quote within 24 hours.",
+                text: "To book your Ammapalli Temple wedding, contact Satavahana Events at +91 88855 52388 or WhatsApp the same number. We offer a free 60-minute consultation, confirm your muhurtam date with the temple and prepare a custom plan within 24 hours.",
               },
             },
             ...faqs.slice(0, 6).map((f) => ({
@@ -226,7 +226,7 @@ function Home() {
               { icon: Heart, t: "Authentic Telugu Traditions", d: "Veda-trained pundits, regional cuisine and rituals performed exactly as your family wishes." },
               { icon: Crown, t: "Luxury, Done Right", d: "Premium florals, cinematic films, designer décor — every detail is investment-worthy." },
               { icon: Star, t: "12+ Years Experience", d: "From intimate temple ceremonies to 1,500-guest celebrations — we've delivered them all." },
-              { icon: CheckCircle2, t: "Transparent Pricing", d: "Itemised proposals, no hidden costs, flexible options for every budget." },
+              { icon: CheckCircle2, t: "Bespoke Proposals", d: "Itemised planning, no hidden surprises, flexible options for every celebration." },
               { icon: MapPin, t: "Destination Specialists", d: "Curated experiences for NRI families and couples flying in from across India and abroad." },
             ].map((f) => (
               <div key={f.t} className="border border-border p-8 bg-background hover-lift">
@@ -360,7 +360,6 @@ function Home() {
             <p className="mt-4">
               <strong className="text-foreground">Muhurtam booking:</strong> 4–6 months in advance for premium Telugu wedding
               season slots (Jan–Mar, Apr–Jun, Nov–Dec).<br />
-              <strong className="text-foreground">Wedding cost:</strong> ₹2.5 lakh (intimate) to ₹12 lakh+ (3-day destination).<br />
               <strong className="text-foreground">Contact:</strong> <a href={`tel:${SITE.phoneRaw}`} className="text-gold hover:underline">+91 88855 52388</a>
             </p>
           </div>

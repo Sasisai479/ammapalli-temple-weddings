@@ -8,8 +8,8 @@ import { EnquireButton } from "@/components/EnquiryModal";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "Ammapalli Temple Wedding FAQ — Cost, Booking, Muhurtam" },
-      { name: "description", content: "Ammapalli Temple wedding FAQs: cost, packages, muhurtam booking, catering, decoration, priests, temple timings, destination wedding planning." },
+      { title: "Ammapalli Temple Wedding FAQ — Booking, Muhurtam, Catering" },
+      { name: "description", content: "Ammapalli Temple wedding FAQs: muhurtam booking, catering, decoration, priests, temple timings, destination wedding planning." },
       { property: "og:title", content: "Ammapalli Temple Wedding FAQs" },
       { property: "og:description", content: "Answers to the most common questions about Ammapalli Temple weddings." },
       { property: "og:url", content: "https://ammapallitempleweddings.com/faq" },

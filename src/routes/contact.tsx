@@ -22,7 +22,6 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const [loading, setLoading] = useState(false);
-  const BUDGETS = ["10–15 Lakhs", "15–20 Lakhs", "20–25 Lakhs", "25–50 Lakhs", "50 Lakhs+"];
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
@@ -35,7 +34,6 @@ function Contact() {
       fd.get("email") && `*Email:* ${fd.get("email")}`,
       fd.get("date") && `*Wedding Date:* ${fd.get("date")}`,
       fd.get("guests") && `*Estimated Guests:* ${fd.get("guests")}`,
-      fd.get("budget") && `*Budget:* ${fd.get("budget")}`,
       fd.getAll("services").length && `*Services of Interest:* ${fd.getAll("services").join(", ")}`,
       fd.get("message") && "",
       fd.get("message") && `*Message:*\n${fd.get("message")}`,
@@ -99,17 +97,6 @@ function Contact() {
                 <label key={s.slug} className="flex items-center gap-3 border border-border bg-background px-4 py-3 cursor-pointer hover:border-gold transition-colors">
                   <input type="checkbox" name="services" value={s.title} className="accent-gold size-4 shrink-0" />
                   <span className="text-sm text-foreground">{s.title}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-          <div className="space-y-3">
-            <label className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Your Budget</label>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {BUDGETS.map((b) => (
-                <label key={b} className="flex items-center gap-2 border border-border bg-background px-3 py-2.5 cursor-pointer hover:border-gold transition-colors text-sm">
-                  <input type="radio" name="budget" value={b} className="accent-gold" />
-                  <span>{b}</span>
                 </label>
               ))}
             </div>

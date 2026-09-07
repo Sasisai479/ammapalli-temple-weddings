@@ -26,66 +26,6 @@ export const stats = [
   { value: "50+", label: "Trusted Vendors" },
 ];
 
-export const packages = [
-  {
-    slug: "silver",
-    name: "Silver Temple Package",
-    price: "₹2,50,000",
-    tagline: "Intimate temple wedding",
-    guests: "Up to 100 guests",
-    color: "from-slate-700 to-slate-900",
-    includes: [
-      "Ammapalli Temple muhurtam coordination",
-      "Muhurtam coordination & temple liaison",
-      "Basic mandap floral décor",
-      "Traditional Telugu lunch (100 pax)",
-      "2 photographers + 1 videographer",
-      "Bridal makeup & jewellery draping",
-      "On-site coordinator",
-    ],
-  },
-  {
-    slug: "gold",
-    name: "Gold Temple Package",
-    price: "₹5,50,000",
-    tagline: "The classic Telugu wedding",
-    guests: "Up to 250 guests",
-    color: "from-amber-700 to-yellow-900",
-    featured: true,
-    includes: [
-      "Premium muhurtam slot at Ammapalli Temple",
-      "Full ritual flow & ceremony coordination",
-      "Lavish floral mandap with kalash & banana stalks",
-      "Traditional Telangana feast (250 pax)",
-      "4 photographers + 2 videographers + drone",
-      "Bridal HD makeup + reception look",
-      "Sangeet stage & DJ for one evening",
-      "Welcome hampers for VIP guests",
-      "Dedicated planner + 6 ground crew",
-    ],
-  },
-  {
-    slug: "platinum",
-    name: "Platinum Destination Package",
-    price: "₹12,00,000",
-    tagline: "A 3-day signature celebration",
-    guests: "Up to 500 guests",
-    color: "from-yellow-600 to-amber-800",
-    includes: [
-      "Full 3-day production: haldi, mehendi, sangeet, wedding, reception",
-      "Premium temple muhurtam & private rituals",
-      "Designer mandap with imported florals",
-      "Multi-cuisine catering with live counters",
-      "Cinematic film team + same-day edits + live stream",
-      "Senior bridal stylist for all events",
-      "Hotel block bookings & guest concierge",
-      "Sangeet production with choreography",
-      "Reception ballroom in black & gold",
-      "Curated welcome hampers for VIP guests",
-    ],
-  },
-];
-
 export const testimonials = [
   {
     name: "Sravani & Karthik",
@@ -120,10 +60,6 @@ export const testimonials = [
 ];
 
 export const faqs = [
-  {
-    q: "How much does an Ammapalli Temple wedding cost?",
-    a: "An Ammapalli Temple wedding with full planning by Satavahana Events typically ranges from ₹2.5 lakh for an intimate ceremony to ₹12 lakh+ for a 3-day destination-style celebration. Cost depends on guest count, décor scale, catering and ceremonies covered. We offer transparent, customisable packages.",
-  },
   {
     q: "Can you arrange catering for temple weddings?",
     a: "Yes. We provide complete South Indian wedding catering — traditional Telangana and Andhra menus, banana-leaf bhojanam, live counters and grand reception dinners. Our catering is FSSAI-certified and scales from 100 to 2,000+ guests.",
@@ -169,8 +105,8 @@ export const faqs = [
     a: "Yes — we plan weddings across Telangana, Andhra Pradesh and at destination temples across South India.",
   },
   {
-    q: "Do you offer customisable packages?",
-    a: "Every package is fully customisable. Mix and match catering, décor, photography, accommodation and entertainment to suit your guest count and budget.",
+    q: "Can we customise services for our wedding?",
+    a: "Yes — every wedding is fully customisable. Mix and match catering, décor, photography, accommodation and entertainment to suit your guest count and family's wishes.",
   },
   {
     q: "How do we book a free consultation?",

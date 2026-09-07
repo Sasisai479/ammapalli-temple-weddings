@@ -38,11 +38,11 @@ export const services: Service[] = [
       "Stress-free, single-point planning across every ceremony day",
       "Deep familiarity with Ammapalli Temple traditions and timings",
       "Telugu-speaking on-ground crew dedicated to your event",
-      "Clear, transparent budgeting with no hidden costs",
+      "Clear, transparent planning with no hidden surprises",
     ],
     process: [
-      { step: "Consultation", detail: "Free 60-minute discovery call to understand your vision, customs and budget." },
-      { step: "Proposal & Design", detail: "A detailed plan with mandap design, vendors, timelines and a transparent quote." },
+      { step: "Consultation", detail: "Free 60-minute discovery call to understand your vision, customs and preferences." },
+      { step: "Proposal & Design", detail: "A detailed plan with mandap design, vendors, timelines and a custom scope." },
       { step: "Production", detail: "Vendor booking, rehearsals, accommodation and ritual scheduling." },
       { step: "Wedding Day", detail: "Dedicated planner + on-ground crew managing every moment from start to finish." },
     ],
@@ -98,7 +98,7 @@ export const services: Service[] = [
     ],
     faqs: [
       { q: "Can we choose specific flower colours?", a: "Yes — we work with you to choose a palette that matches your outfits, theme and family preferences." },
-      { q: "Do you offer artificial flower options?", a: "We specialise in fresh florals but offer high-quality artificial accents where needed for budget or longevity." },
+      { q: "Do you offer artificial flower options?", a: "We specialise in fresh florals but offer high-quality artificial accents where needed for longevity or specific design requirements." },
     ],
   },
   {
@@ -197,7 +197,7 @@ export const services: Service[] = [
       { step: "Reception", detail: "Glamorous transformation with second look." },
     ],
     faqs: [
-      { q: "Do you offer makeup for the bride's family?", a: "Yes — packages can include the mother of the bride, sisters and bridesmaids." },
+      { q: "Do you offer makeup for the bride's family?", a: "Yes — beauty services can include the mother of the bride, sisters and bridesmaids." },
       { q: "How long does bridal makeup take?", a: "Typically 2.5–3 hours for the full bridal look including hair and draping." },
     ],
   },

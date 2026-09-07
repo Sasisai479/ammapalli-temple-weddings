@@ -9,7 +9,7 @@ export const Route = createFileRoute("/real-weddings")({
   head: () => ({
     meta: [
       { title: "Real Ammapalli Temple Weddings — Stories & Photos | Satavahana Events" },
-      { name: "description", content: "Real Ammapalli Temple wedding stories — couples, ceremonies, mandap décor, guest counts and budgets. See exactly how we plan Telugu temple weddings at Ammapalli Sri Sita Ramachandra Swamy Temple, Shamshabad." },
+      { name: "description", content: "Real Ammapalli Temple wedding stories — couples, ceremonies, mandap décor, and guest counts. See exactly how we plan Telugu temple weddings at Ammapalli Sri Sita Ramachandra Swamy Temple, Shamshabad." },
       { property: "og:title", content: "Real Ammapalli Temple Weddings — Stories & Photos" },
       { property: "og:description", content: "Real Ammapalli Temple wedding stories — couples, mandaps, ceremonies and guest counts." },
       { property: "og:url", content: "https://ammapallitempleweddings.com/real-weddings" },

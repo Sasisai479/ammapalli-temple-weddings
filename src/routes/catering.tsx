@@ -33,7 +33,6 @@ const menus = [
 ];
 
 const faqs = [
-  { q: "How much does wedding catering cost in Hyderabad?", a: "Pricing typically ranges from ₹450 to ₹1,800 per plate depending on menu complexity, live counters and service style. We offer transparent per-plate quotes after a tasting." },
   { q: "Do you serve traditional Telangana wedding food?", a: "Yes — pulihora, gongura pachadi, bobbatlu, garelu, ariselu, sarva pindi and the full Telangana wedding spread are part of our signature menus." },
   { q: "Can you cater for non-vegetarian receptions?", a: "Yes — chicken biryani, mutton curry, fish fry, kebabs and Andhra non-veg specialities are available with separate service stations." },
   { q: "Is your catering FSSAI-certified?", a: "Yes — our central kitchen and all event setups are FSSAI-licensed. Hygiene and food safety are non-negotiable." },
@@ -78,16 +77,16 @@ function Catering() {
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <img src={floral} alt="Wedding catering presentation with floral décor" loading="lazy" width={1600} height={900} className="aspect-video object-cover hover-zoom" />
           <div>
-            <div className="text-xs tracking-[0.4em] uppercase text-gold">Catering Packages</div>
+            <div className="text-xs tracking-[0.4em] uppercase text-gold">Catering Menus</div>
             <h2 className="font-display text-4xl mt-4">From intimate to <span className="gold-gradient italic">imperial</span></h2>
             <ul className="mt-6 space-y-4 text-foreground/90">
-              <li className="flex items-start gap-3"><Check className="size-4 text-gold mt-1" /> Temple lunch packages from ₹450/plate</li>
-              <li className="flex items-start gap-3"><Check className="size-4 text-gold mt-1" /> Premium reception menus from ₹950/plate</li>
-              <li className="flex items-start gap-3"><Check className="size-4 text-gold mt-1" /> Live counters & chef stations from ₹250/plate</li>
+              <li className="flex items-start gap-3"><Check className="size-4 text-gold mt-1" /> Traditional temple lunch menus</li>
+              <li className="flex items-start gap-3"><Check className="size-4 text-gold mt-1" /> Premium reception feasts & grand spreads</li>
+              <li className="flex items-start gap-3"><Check className="size-4 text-gold mt-1" /> Live counters & chef stations</li>
               <li className="flex items-start gap-3"><Check className="size-4 text-gold mt-1" /> Bar & beverage services available separately</li>
             </ul>
             <EnquireButton prefillService="Wedding Catering Services" className="inline-flex items-center gap-3 bg-gold text-primary-foreground rounded-full px-8 py-4 text-xs tracking-[0.3em] uppercase shadow-gold mt-8 hover:translate-y-[-2px] transition-transform">
-              Request quote <ArrowUpRight className="size-4" />
+              Enquire now <ArrowUpRight className="size-4" />
             </EnquireButton>
           </div>
         </div>

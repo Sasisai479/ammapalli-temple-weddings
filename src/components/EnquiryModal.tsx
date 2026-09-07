@@ -12,8 +12,6 @@ export function useEnquiry() {
   return ctx;
 }
 
-const BUDGETS = ["10–15 Lakhs", "15–20 Lakhs", "20–25 Lakhs", "25–50 Lakhs", "50 Lakhs+"];
-
 export function EnquiryProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [prefill, setPrefill] = useState<string | undefined>();
@@ -55,7 +53,6 @@ function EnquiryDialog({ prefill, onClose }: { prefill?: string; onClose: () => 
     const email = (fd.get("email") as string) || "";
     const date = (fd.get("date") as string) || "";
     const guests = (fd.get("guests") as string) || "";
-    const budget = (fd.get("budget") as string) || "";
     const message = (fd.get("message") as string) || "";
     const selectedServices = fd.getAll("services").join(", ");
 
@@ -67,7 +64,6 @@ function EnquiryDialog({ prefill, onClose }: { prefill?: string; onClose: () => 
       email && `*Email:* ${email}`,
       date && `*Wedding Date:* ${date}`,
       guests && `*Estimated Guests:* ${guests}`,
-      budget && `*Budget:* ${budget}`,
       selectedServices && `*Services of Interest:* ${selectedServices}`,
       message && "",
       message && `*Message:*\n${message}`,
@@ -114,21 +110,6 @@ function EnquiryDialog({ prefill, onClose }: { prefill?: string; onClose: () => 
             <Field label="Email" name="email" type="email" />
             <Field label="Wedding Date" name="date" type="date" />
             <Field label="Estimated Guests" name="guests" type="number" />
-          </div>
-
-          <div className="space-y-3">
-            <Label>Your Budget</Label>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {BUDGETS.map((b) => (
-                <label
-                  key={b}
-                  className="flex items-center gap-2 border border-border bg-background px-3 py-2.5 cursor-pointer hover:border-gold transition-colors text-sm"
-                >
-                  <input type="radio" name="budget" value={b} className="accent-gold" />
-                  <span>{b}</span>
-                </label>
-              ))}
-            </div>
           </div>
 
           <div className="space-y-3">
