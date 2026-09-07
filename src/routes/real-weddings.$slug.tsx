@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { getRealWedding, realWeddings, type WeddingSection } from "@/lib/realWeddings";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EnquireButton } from "@/components/EnquiryModal";
-import { ArrowUpRight, Calendar, Users, Package, MapPin, CheckCircle2, type LucideIcon } from "lucide-react";
+import { ArrowUpRight, Calendar, Users, Sparkles, MapPin, CheckCircle2, type LucideIcon } from "lucide-react";
 
 const BASE = "https://ammapallitempleweddings.com";
 
@@ -113,7 +113,7 @@ function RealWeddingDetail() {
         {([
           { icon: Calendar, label: "Date", value: w.displayDate },
           { icon: Users, label: "Guests", value: `${w.guests}` },
-          { icon: Package, label: "Type", value: w.weddingType },
+          { icon: Sparkles, label: "Type", value: w.weddingType },
           { icon: MapPin, label: "From", value: w.city },
         ] as { icon: LucideIcon; label: string; value: string }[]).map((s) => (
           <div key={s.label} className="border border-border bg-card/40 p-5">
